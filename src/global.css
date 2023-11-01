@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/l/font?kit=tDbV2o-flEEny0FZhsfKu5WU4yD5KSWNbW7631WyV44hXhf138Dz72GqDTPgQGeNtVBR7pjob7A&skey=48ad01c60053c2ae&v=v18) format('woff2');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/l/font?kit=PbykFmXiEBPT4ITbgNA5Cgm202xA7rL1PefSSqmQ3DghcOfB4XIZ5fWpMut2QRsdrTWaGLlZd6GDxdAGUJy1lpGo-sX_L8sD5EEDLrtzrDw2w0Ykz6J1x3ihrrSXn2pc_7qsDksmCOqWt42g9TZZtKBD0hPbfyDG52O3NO4DZURTf7YukG2LfHSp38yAWC2FGqD9jz8njYhfesz3ubP_Eh6zeLgv0IwjUWEWbtQ6lfbvTDMkFlPf_TiKCKxaMMYXsfegkebh7UnMKdTPiDGK55mz32WBno4NFkg6Ef0HDTNFFMXAIGU8ruN4wpcydlaZ3cYZGhQeiupmnb_Zao6CRCJkxiG02DlJyxeMtmbfPP4EVk46vyS-Jsmi_o5b2xKzaWydUCVQLJv0TYqFmTnqheYGALxraIjevKi3L4U39MheIpGWcWGN7_YyEeIeDxitv6JE4xUINOx3mri7Gx4-kUU3B2i72TwDhElnf9qmxz6dBk2aOA9MpfShj5YvAuQXybVFCN1gQEyDLldiaiw3v8evJp87Z2EPR2XSg8eM8mu_jZD2r5f_PVlXrY1ICyp6QNrxWOyevveT5jjsQhoHAxxiEVh1w1PymoztkkaOvb5prnVhOcctJ__iz5ZhndYrurO0QNb3Qh1T4dSsUXVvSHR2kyAJnMU4DVMKqc-h0adVRJU0GmJ6ARSXuAICp_rev9Vq1eyo_H5MA3TiBYj84z-WauEmmXwKmW1RahwUQJId3DvYd_tLILaxWgQBfDK1RI-rkHx2b1232Ri8_mMj12HsjA6Wq5jFLmnDHGLOL2Lwfgcaeo8y6v2KAE1HmBe-vsmbfe-c4XhRaqWMPWJ9ihDwqFOHIA6iRZvbHFVGZ6FV-I95jRiE66FDWFfnTbhYssFSzyYUIlVgR95ad6_8b9BwtvNevg2Gx4gVo3wKnVCbYDQ_qx219FGZ3L7u4fh8iOFO7Dh3lxridhFLkJUAxbIsQpjYq-BO6CE1vEW-DrAYr3YzeNN_VKSXrlmjWORj-MSyQOSIffxSOgj0Qk6it401quAX9JWKhs-zRQsPorEhH7slbSmwMT4xiupwehlDuw1mVp3hRdSQbWmYpgw&skey=87e7ee645936e2c7&v=v36) format('woff2');
+}
+
+body[data-theme="white"] {
+    --tx-main: #1e1e1e;  /* Darker text color */
+    --tx-sub: #616161;   /* Subtle text color for secondary text */
+    --tx-third: #8d8d8d; /* Lighter gray for tertiary text or borders */
+    --bg-main: #eaeaea;  /* Light gray background */
+    --bg-sub: #bdbdbd;   /* Slightly darker gray for subtle backgrounds */
+    --bg-third: #9e9e9e; /* Even darker gray for differentiating sections */
+}
+
+body[data-theme="dark"] {
+    --tx-main: #e0e0e0;   /* Light text color for better readability on dark background */
+    --tx-sub: #bdbdbd;    /* Subtle text color for secondary text */
+    --tx-third: #8d8d8d;  /* Dark gray for tertiary text or borders */
+    --bg-main: #2c2c2c;   /* Darker gray background */
+    --bg-sub: #424242;    /* Slightly lighter gray for subtle backgrounds */
+    --bg-third: #616161;  /* Even lighter gray for differentiating sections */
+}
+
+
+*, body {
+    --point: #7db1ff;
+
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    color: var(--tx-main);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container .inner {
+    width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    .container .inner {
+        width: 95%;
+    }
+}
+
+a {
+    text-decoration: none;
+}

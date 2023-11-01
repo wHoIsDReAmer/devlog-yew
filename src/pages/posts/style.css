@@ -1,0 +1,115 @@
+* {
+    user-select: none;
+}
+
+.container {
+    font-family: 'Noto Sans KR';
+}
+
+.container > .inner {
+    gap: 10px;
+}
+
+.tags {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags > li {
+    font-size: .87rem;
+    list-style: none;
+    background-color: transparent;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid var(--point);
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.tags > li:hover {
+    background-color: var(--point);
+}
+
+li.tag-enabled {
+    background-color: var(--point);
+}
+
+/* Container for all posts */
+.posts {
+    margin: 20px 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Post Styles */
+.post {
+    background-color: var(--bg-main);
+    border-radius: 30px;
+    padding: 20px;
+    overflow: hidden;  /* Hide overflowing content, ensuring rounded corners for images */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.post p {
+    background-color: transparent;
+}
+
+.post:hover {
+    background-color: var(--bg-sub);
+}
+
+.post .post-image {
+    width: 100%;  /* Make image fill the container */
+    height: 200px;  /* Set a fixed height */
+    object-fit: cover;  /* Cover the container without stretching */
+    margin-bottom: 5px;  /* Space between image and text */
+    border-radius: 30px;
+}
+
+.post .title {
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+}
+
+.post .desc {
+    font-size: .9rem;
+    margin: 0 0 5px 0;
+    text-wrap: none;
+    text-overflow: ellipsis;
+    color: var(--tx-third);
+}
+
+.post .date {
+    font-size: 0.9em;
+    color: #aaa;
+    margin: 0 0 5px 0;
+}
+
+@media (max-width: 768px) {
+    .tags > li {
+        font-size: .85rem;
+    }
+
+    .posts {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .post {
+        padding: 10px;
+    }
+
+    .post .title {
+        font-size: .9rem;
+    }
+
+    .post .desc {
+        font-size: .8rem;
+    }
+}

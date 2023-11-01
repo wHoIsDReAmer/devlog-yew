@@ -1,0 +1,53 @@
+.navlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: 'Jetbrains Mono', 'Noto Sans KR';
+    margin: 0 10% 0 10%;
+    margin-bottom: 15px;
+}
+
+.flex-right {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: row;
+    font-family: 'Jetbrains Mono';
+}
+
+.navlist > li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    list-style: none;
+}
+
+.navlist .button {
+    position: relative;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 500;
+    list-style: none;
+    cursor: pointer;
+    transition: scale .2s ease;
+}
+
+.navlist .button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;  /* Set initial width to 0 */
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--tx-sub);
+    transition: all .2s ease-in-out;  /* Move transition property here */
+}
+
+.navlist .button:hover {
+    scale: 110%;
+}
+
+.navlist .button:hover:after {
+    width: 100%;
+}
