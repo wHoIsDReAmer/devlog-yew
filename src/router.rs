@@ -3,6 +3,7 @@ use yew_router::prelude::*;
 
 use crate::component::navbar::NavBar;
 use crate::pages::{main::Main,
+                   post::Post,
                    posts::Posts,
                    info::Info,
                    login::Login,
@@ -14,6 +15,10 @@ use crate::js_bind::{document, localstorage};
 pub enum Route {
     #[at("/")]
     Index,
+    #[at("/post/:id")]
+    Post {
+        id: String
+    },
     #[at("/posts")]
     Posts,
     #[at("/info")]
@@ -30,6 +35,9 @@ pub fn switch(routes: Route) -> Html {
         Route::Posts => html! { <Posts/> },
         Route::Info => html! { <Info/> },
         Route::Login => html! { <Login/> },
+        Route::Post {
+            id
+        } => html! { <Post id={id} /> },
         Route::NotFound => html! { <NotFound/> }
     }
 }

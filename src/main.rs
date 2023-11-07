@@ -6,5 +6,5 @@ mod component;
 use yew::prelude::*;
 
 fn main() {
-    yew::Renderer::<router::RouterComponent>::new().render();
+    yew::Renderer::<router::RouterComponent>::new().render();    
 }
