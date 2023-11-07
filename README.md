@@ -1,5 +1,5 @@
 # devlog-yew
-[](https://github.com/wHoIsDReAmer/devlog-rs/blob/main/screenshots/main.png)
+[](https://github.com/wHoIsDReAmer/devlog-yew/blob/main/screenshots/main.png)
 Private devlog website built with yew-rs
 
 # Getting start with rust
